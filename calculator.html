@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.button{ width: 30px;}
+	</style>
+</head>
+<body>
+
+<table style="margin-left:auto;margin-right:auto;border:1px solid #000; border-collapse:collapse;">
+<tr>
+	<td align="center" colspan="4"><input type="text" id="Calcs"></td>
+</tr>
+<tr>
+	<td aligh="center" style="border=1px solid #000"><button class="button">1</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">2</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">3</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">+</button></td>
+</tr>
+<tr>
+	<td aligh="center" style="border=1px solid #000"><button class="button">4</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">5</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">6</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">-</button></td>
+</tr>
+<tr>
+	<td aligh="center" style="border=1px solid #000"><button class="button">7</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">8</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">9</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">/</button></td>
+</tr>
+<tr>
+	<td aligh="center" style="border=1px solid #000"><button class="button">0</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">(</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">)</button></td>
+	<td aligh="center" style="border=1px solid #000"><button class="button">*</button></td>
+</tr>
+<tr>
+	<td align="center" colspan="2"><button id="Calculate">Calculate</button></td>
+	<td align="center" colspan="2"><button id="Clear">Clear</button></td>
+</tr>
+</table>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.button').click(function(){
+			$('#Calcs').val($('#Calcs').val()+$(this).html());
+		});
+		$('#Calculate').click(function(){
+			$('#Calcs').val(eval($('#Calcs').val()));
+		});
+		$('#Clear').click(function(){
+			$('#Calcs').val('');
+		});
+	});
+
+
+
+
+</script>
+</body>
+</html>
